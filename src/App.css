@@ -1,0 +1,98 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 占满视口高度 */
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  width: 50%;
+  margin: 20px auto; /* 居中 */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f8f8f8; /* 统一背景颜色 */
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* 视口高度减去顶部固定部分的高度 */
+}
+
+.FrozenContainer {
+  position: sticky; /* 固定顶部 */
+  top: 0; /* 距离顶部为 0 */
+  z-index: 10; /* 确保该部分在滚动部分之上 */
+  background-color: inherit; /* 背景色与滚动区域保持一致 */
+  padding: 10px 0; /* 调整内边距 */
+  border-bottom: 1px solid transparent; /* 移除分隔感 */
+}
+
+/* CertificateHeader 样式 */
+.CertificateHeader {
+  background-color: inherit; /* 继承背景颜色 */
+  padding: 10px 15px; /* 内边距 */
+  border-bottom: 1px solid transparent; /* 避免边框产生分隔感 */
+}
+
+/* 新增样式：Leaflet 地图部分 */
+.leaflet-map {
+  width: 100%; /* 地图宽度设置为占满父容器 */
+  height: 400px; /* 固定地图高度 */
+  margin: 10px auto; /* 居中并增加与其他元素的间距 */
+  border-radius: 8px; /* 添加圆角效果 */
+  overflow: hidden; /* 确保内容不会溢出 */
+}
+
+/* 新增样式：内容区域容器 */
+.content-container {
+  padding: 20px; /* 增加内容区域的内边距 */
+  background-color: #fff; /* 统一内容区域背景为白色 */
+  border: 1px solid #ddd; /* 增加浅灰色边框 */
+  border-radius: 8px; /* 添加圆角 */
+  margin: 20px auto; /* 居中内容区域 */
+  max-width: 1200px; /* 限制内容区域的最大宽度 */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+}
+
+.content.open {
+  display: block; /* 展开时显示内容 */
+}
+
+.content {
+  background-color: #f9f9f9;
+  display: none;
+  padding: 10px;
+}

@@ -1,0 +1,61 @@
+.infoCard {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #4d4d4d;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 10px;
+  overflow: hidden;
+  transition: height 0.5s ease; // Smooth height changes
+}
+
+.infoHeader h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.removeButton {
+  background-color: #fff;
+  color: #333;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+.infoStatus {
+  display: flex;
+  justify-content: space-between;
+  color: #ddd;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  strong {
+    font-size: 16px;
+  }
+}
+
+.vesselImage {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.9;
+  img {
+    width: 150px;
+    height: auto;
+  }
+}

@@ -1,0 +1,47 @@
+.certificate-header {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 49%;
+  margin: 0 auto;
+}
+
+.application-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.application-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.application-button:hover {
+  background-color: #0056b3;
+}
+
+.status-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.mapbox-button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}

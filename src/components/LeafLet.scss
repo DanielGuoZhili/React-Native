@@ -1,0 +1,8 @@
+.leaflet-map {
+  width: 80%;
+  height: 70vh;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  border-radius: 8px; /* 添加圆角效果 */
+  overflow: hidden; /* 确保内容不会溢出 */
+}

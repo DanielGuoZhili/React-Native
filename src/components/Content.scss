@@ -1,0 +1,222 @@
+.sub-content {
+  background-color: #d3d3d3;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.sub-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: none;
+}
+
+.sub-content .table-row div {
+  flex: 1;
+  text-align: center;
+  color: #333;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: none;
+  width: 95%;
+  margin: 0 auto; /* 居中 */
+}
+
+// .ArrowSample {
+//   width: 7%;
+//   height: 2%;
+//   position: relative;
+//   overflow: hidden;
+//   margin: 0 auto;
+//   display: flex;
+//   .box {
+//     width: 10px;
+//     height: 10px;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     clip-path: polygon(100% 50%, 0 0, 0 100%); // 将 box 裁剪为锐角三角形 (新增)
+//   }
+
+//   @for $i from 1 through 50 {
+//     .box#{$i} {
+//       background-color: #15db30; // 使用固定颜色，去掉虚化
+//       offset-path: path('M 10 12 L 150 12'); // 直线路径，调整高度到 50
+//       animation: move 5000ms infinite linear; // 动画速度更快
+//       animation-delay: 500ms * $i; // 每个 box 增加延迟
+//     }
+//   }
+
+//   @keyframes move {
+//     to {
+//       offset-distance: 100%;
+//     }
+//   }
+// }
+
+// .ArrowSample1 {
+//   width: 7%;
+//   height: 2%;
+//   margin: 0 auto;
+//   position: relative;
+//   overflow: hidden;
+//   margin-top: 10px;
+//   display: flex;
+//   .box {
+//     width: 10px;
+//     height: 10px;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+
+//     clip-path: polygon(100% 50%, 0 0, 0 100%); // 将 box 裁剪为锐角三角形 (新增)
+//   }
+
+//   @for $i from 1 through 50 {
+//     .box#{$i} {
+//       background-color: #15db30; // 使用固定颜色，去掉虚化
+//       offset-path: path('M 170 12 L 30 12'); // 直线路径，调整高度到 50
+//       animation: move 5000ms infinite linear; // 动画速度更快
+//       animation-delay: 500ms * $i; // 每个 box 增加延迟
+//     }
+//   }
+
+//   @keyframes move {
+//     to {
+//       offset-distance: 100%;
+//     }
+//   }
+// }
+.ArrowSample,
+.ArrowSample1 {
+  width: 15%;
+  height: 8vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  .box {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    clip-path: polygon(100% 50%, 0 0, 0 100%); // 原有，保持三角形箭头
+  }
+
+  // 左到右路径
+  &.ArrowSample {
+    @for $i from 1 through 50 {
+      .box#{$i} {
+        background-color: #15db30;
+        offset-path: path('M 50 50 L 500 50');
+        offset-rotate: auto;
+        animation: move 10000ms infinite linear;
+        animation-delay: 500ms * $i;
+      }
+    }
+
+    .from-box {
+      left: 0;
+    }
+
+    .to-box {
+      right: 0;
+    }
+  }
+
+  // 右到左路径
+  &.ArrowSample1 {
+    @for $i from 1 through 50 {
+      .box#{$i} {
+        background-color: #15db30;
+        offset-path: path('M 500 50 L 50 50');
+        offset-rotate: auto;
+        animation: move 10000ms infinite linear;
+        animation-delay: 500ms * $i;
+      }
+    }
+
+    .from-box {
+      right: 0;
+    }
+
+    .to-box {
+      left: 0;
+    }
+  }
+
+  .from-box,
+  .to-box {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid black;
+  }
+
+  .from-box {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .to-box {
+    background-color: #dc3545;
+    color: white;
+  }
+
+  @keyframes move {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+}
+
+// backup
+
+// .ArrowSample {
+//   width: 80%;
+//   height: 70vh;
+//   border: 1px solid #ccc;
+//   margin: 0 auto;
+//   position: relative;
+//   overflow: hidden;
+
+//   .box {
+//     width: 10px;
+//     height: 10px;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+
+//     clip-path: polygon(100% 50%, 0 0, 0 100%); // 将 box 裁剪为锐角三角形 (新增)
+//   }
+
+//   @for $i from 1 through 200 {
+//     .box#{$i} {
+//       background-color: #15db30; // 使用固定颜色，去掉虚化
+//       offset-path: path('M 10 50 L 500 50'); // 直线路径，调整高度到 50
+//       // offset-rotate: auto; // 确保三角形方向跟随路径
+//       animation: move 10000ms infinite linear; // 动画速度更快
+//       animation-delay: 500ms * $i; // 每个 box 增加延迟
+//     }
+//   }
+
+//   @keyframes move {
+//     to {
+//       offset-distance: 100%;
+//     }
+//   }
+// }

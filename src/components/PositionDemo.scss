@@ -1,0 +1,76 @@
+.position-demo {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+
+  h2 {
+    text-align: center;
+  }
+
+  /* Static Position */
+  .static-box {
+    background-color: #f3f3f3;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    /* Static 是默认值，无需显式声明 position */
+  }
+
+  /* Relative Position */
+  .relative-box {
+    background-color: #d3f3d3;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative; /* 相对自身的原始位置 */
+    top: 10px; /* 向下偏移 10px */
+    left: 10px; /* 向右偏移 10px */
+    border: 1px solid #8bc34a;
+    /* 注意：即使设置偏移，元素仍然会保留它的原始占位 */
+  }
+
+  /* Absolute Position */
+  .absolute-container {
+    background-color: #f3d3d3;
+    padding: 20px;
+    margin: 10px 0;
+    position: relative; /* 定义父容器为绝对定位的参考 */
+    border: 1px solid #f44336;
+
+    .absolute-box {
+      background-color: #f3f3d3;
+      padding: 10px;
+      position: absolute; /* 相对父容器定位 */
+      top: 20px; /* 父容器顶部向下 20px */
+      left: 20px; /* 父容器左边向右 20px */
+      border: 1px solid #ff9800;
+    }
+  }
+
+  /* Fixed Position */
+  .fixed-box {
+    background-color: #d3f3f3;
+    padding: 10px;
+    margin: 10px 0;
+    position: fixed; /* 相对于浏览器窗口固定 */
+    bottom: 20px; /* 浏览器底部向上偏移 20px */
+    right: 20px; /* 浏览器右边向左偏移 20px */
+    border: 1px solid #03a9f4;
+    /* 不会随页面滚动而改变位置 */
+  }
+
+  /* Sticky Position */
+  .sticky-container {
+    background-color: #d3d3f3;
+    padding: 50px 10px;
+    margin: 10px 0;
+    border: 1px solid #673ab7;
+    height: 300px; /* 提供足够高度以展示滚动效果 */
+
+    .sticky-box {
+      background-color: #e3d3f3;
+      padding: 10px;
+      position: sticky; /* 相对滚动容器 */
+      top: 10px; /* 滑动到距离顶部 10px 时固定 */
+      border: 1px solid #9c27b0;
+    }
+  }
+}
